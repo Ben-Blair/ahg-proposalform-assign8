@@ -1,0 +1,215 @@
+/* AHG Proposal Form 2020 - Accessible Styles */
+
+/* General layout */
+body {
+  font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1.5em 2em;
+}
+
+header h1 {
+  font-size: 2em;
+  margin: 0 0 0.25em 0;
+}
+
+header .subtitle {
+  font-size: 1.25em;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Main content area */
+main {
+  max-width: 800px;
+  margin: 1.5em auto;
+  padding: 0 2em;
+}
+
+/* Form instructions */
+.form-instructions {
+  background-color: #e8f0fe;
+  border-left: 4px solid #003366;
+  padding: 1em 1.2em;
+  margin-bottom: 1.5em;
+  font-size: 1em;
+}
+
+/* Section headings */
+h2 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+
+/* Fieldset and legend */
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1em 1.2em;
+  margin-bottom: 1.5em;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+legend {
+  font-size: 1.1em;
+  padding: 0 0.5em;
+}
+
+/* Lists inside forms */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+
+/* Text inputs, select, textarea */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+  border: 2px solid #666;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Required field star indicator */
+.star {
+  color: #BF1722;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Focus and active styles for keyboard accessibility */
+textarea:focus,
+select:focus,
+select:active,
+input:focus,
+input:active {
+  color: #BF1722 !important;
+  background-color: #fff2a8 !important;
+  outline: solid #03C medium;
+}
+
+input:focus + label,
+input:active + label,
+label[for]:focus,
+label[for]:active {
+  color: #BF1722 !important;
+}
+
+/* Radio button group */
+.oneques {
+  display: flex;
+  gap: 1.5em;
+  padding: 0.5em 0;
+}
+
+.oneques span {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+
+.oneques input[type="radio"] {
+  width: auto;
+  margin: 0;
+}
+
+.oneques label {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* Required field input styling */
+.reqfield {
+  border-left: 4px solid #BF1722;
+}
+
+/* Submit button */
+.submit-area {
+  margin: 2em 0;
+  text-align: left;
+}
+
+input[type="submit"] {
+  background-color: #003366;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 0.75em 2em;
+  border: 2px solid #003366;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Lora', Georgia, "Times New Roman", Times, serif;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #004488;
+  outline: solid #03C medium;
+}
+
+/* Footer */
+footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Links */
+a {
+  color: #003366;
+}
+
+a:focus {
+  outline: solid #03C medium;
+}
+
+/* Invalid form fields */
+input:invalid,
+textarea:invalid {
+  border-color: #BF1722;
+}
